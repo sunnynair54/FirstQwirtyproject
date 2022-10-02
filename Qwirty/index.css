@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header,
+footer {
+    flex: none;
+}
+
+main {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.categories {
+    display: flex;
+    flex: 0 0 256px;
+    flex-direction: column;
+}
+
+.categories a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: #44b;
+    color: white;
+}
+
+.categories a:hover {
+    background-color: blue;
+    box-shadow: 0 2px 5px -2px black;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(144, 133, 203);
+    padding: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+
+}
+
+footer section {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer section:last-child {
+    margin-right: 0;
+}
+
+footer h2 {
+    color: white;
+    border-bottom: rgb(113, 102, 175);
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+
+}
+
+footer a:hover {
+    border-bottom: 1px white solid;
+    margin-bottom: 9px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.item {
+    flex: 1 0 60px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 2px 5px 2px black;
+    ;
+}
+
+.item-name,
+.fact-line {
+    background-color: rgb(55, 154, 224);
+
+}
+
+.fact-line {
+    color: rgb(226, 167, 177);
+    border-radius: 8px;
+}
+
+.item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    color: rgb(54, 1, 77);
+}
+
+.add-item {
+    background-color: rgb(137, 50, 145);
+    color: rgb(250, 203, 211);
+    border-radius: 8px;
+}
+
+.item-description {
+    background-color: rgb(118, 176, 218);
+    color: rgb(147, 56, 72);
+    border-radius: 8px;
+}
+
+@media(max-width:768px) {
+
+    .item-description,
+    .item-name,
+    .item-image,
+    .fact-line {
+        font-size: 30px;
+    }
+
+    .item {
+        flex-basis: 100%;
+    }
+
+    .items {
+        flex-direction: column;
+    }
+}
+
+.main-nav {
+    display: flex;
+    background-color: rgb(22, 22, 94);
+    justify-content: space-between;
+
+}
+
+
+.main-nav .full-width {
+    display: none;
+}
+
+.main-nav .short-width {
+    display: flex;
+
+}
+
+@media(min-width:768px) {
+    .main-nav .full-width {
+        display: flex;
+    }
+
+    .main-nav .short-width {
+        display: none;
+    }
+}
+
+.sub-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav-list a {
+    padding: 15px;
+    border-right: 3px;
+    color: white;
+    display: block;
+
+}
+
+.nav-list li:last-of-type a {
+    border-right: none;
+}
+
+.search-form {
+    display: flex;
+    flex: 1;
+}
+
+input {
+    padding: 2px;
+    border: 0px;
+    border-bottom: 2px rgb(25, 19, 138) solid;
+    flex: 1;
+}
+
+button {
+    padding: 2px;
+    border: 0px;
+    background-color: rgb(87, 87, 253)
+}
+
+.company-name {
+    font-family: 'IM Fell Great Primer SC', serif;
+    font-size: 50px;
+    color: rgb(25, 19, 138);
+    align-items: center;
+    margin: 15px;
+}
+
+
+.credit-offer {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background: red;
+    padding: 4px;
+    margin: 3px;
+}
